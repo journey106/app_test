@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="2" hostname="PCDALAO" name="pytest" skipped="0" tests="2" time="0.164" timestamp="2019-09-27T16:04:18.807300"><testcase classname="test_cases.test_login.TestLogin" file="test_cases\test_login.py" line="17" name="test_login_mobile_error" time="0.001"><failure message="TypeError: test_login_mobile_error() missing 2 required positional arguments: &apos;user_data&apos; and &apos;init_app&apos;">self = &lt;unittest.case._Outcome object at 0x00000000047B88D0&gt;
+test_case = &lt;test_login.TestLogin testMethod=test_login_mobile_error&gt;
+isTest = True
+
+    @contextlib.contextmanager
+    def testPartExecutor(self, test_case, isTest=False):
+        old_success = self.success
+        self.success = True
+        try:
+&gt;           yield
+
+C:\Program Files\Python37\lib\unittest\case.py:59: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;test_login.TestLogin testMethod=test_login_mobile_error&gt;
+result = &lt;TestCaseFunction test_login_mobile_error&gt;
+
+    def run(self, result=None):
+        orig_result = result
+        if result is None:
+            result = self.defaultTestResult()
+            startTestRun = getattr(result, &apos;startTestRun&apos;, None)
+            if startTestRun is not None:
+                startTestRun()
+    
+        result.startTest(self)
+    
+        testMethod = getattr(self, self._testMethodName)
+        if (getattr(self.__class__, &quot;__unittest_skip__&quot;, False) or
+            getattr(testMethod, &quot;__unittest_skip__&quot;, False)):
+            # If the class or method was skipped.
+            try:
+                skip_why = (getattr(self.__class__, &apos;__unittest_skip_why__&apos;, &apos;&apos;)
+                            or getattr(testMethod, &apos;__unittest_skip_why__&apos;, &apos;&apos;))
+                self._addSkip(result, self, skip_why)
+            finally:
+                result.stopTest(self)
+            return
+        expecting_failure_method = getattr(testMethod,
+                                           &quot;__unittest_expecting_failure__&quot;, False)
+        expecting_failure_class = getattr(self,
+                                          &quot;__unittest_expecting_failure__&quot;, False)
+        expecting_failure = expecting_failure_class or expecting_failure_method
+        outcome = _Outcome(result)
+        try:
+            self._outcome = outcome
+    
+            with outcome.testPartExecutor(self):
+                self.setUp()
+            if outcome.success:
+                outcome.expecting_failure = expecting_failure
+                with outcome.testPartExecutor(self, isTest=True):
+&gt;                   testMethod()
+E                   TypeError: test_login_mobile_error() missing 2 required positional arguments: &apos;user_data&apos; and &apos;init_app&apos;
+
+C:\Program Files\Python37\lib\unittest\case.py:615: TypeError</failure></testcase><testcase classname="test_cases.test_login.TestLogin" file="test_cases\test_login.py" line="31" name="test_login_pwd_error" time="0.002"><failure message="TypeError: test_login_pwd_error() missing 2 required positional arguments: &apos;user_data&apos; and &apos;init_app&apos;">self = &lt;unittest.case._Outcome object at 0x0000000004926048&gt;
+test_case = &lt;test_login.TestLogin testMethod=test_login_pwd_error&gt;
+isTest = True
+
+    @contextlib.contextmanager
+    def testPartExecutor(self, test_case, isTest=False):
+        old_success = self.success
+        self.success = True
+        try:
+&gt;           yield
+
+C:\Program Files\Python37\lib\unittest\case.py:59: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;test_login.TestLogin testMethod=test_login_pwd_error&gt;
+result = &lt;TestCaseFunction test_login_pwd_error&gt;
+
+    def run(self, result=None):
+        orig_result = result
+        if result is None:
+            result = self.defaultTestResult()
+            startTestRun = getattr(result, &apos;startTestRun&apos;, None)
+            if startTestRun is not None:
+                startTestRun()
+    
+        result.startTest(self)
+    
+        testMethod = getattr(self, self._testMethodName)
+        if (getattr(self.__class__, &quot;__unittest_skip__&quot;, False) or
+            getattr(testMethod, &quot;__unittest_skip__&quot;, False)):
+            # If the class or method was skipped.
+            try:
+                skip_why = (getattr(self.__class__, &apos;__unittest_skip_why__&apos;, &apos;&apos;)
+                            or getattr(testMethod, &apos;__unittest_skip_why__&apos;, &apos;&apos;))
+                self._addSkip(result, self, skip_why)
+            finally:
+                result.stopTest(self)
+            return
+        expecting_failure_method = getattr(testMethod,
+                                           &quot;__unittest_expecting_failure__&quot;, False)
+        expecting_failure_class = getattr(self,
+                                          &quot;__unittest_expecting_failure__&quot;, False)
+        expecting_failure = expecting_failure_class or expecting_failure_method
+        outcome = _Outcome(result)
+        try:
+            self._outcome = outcome
+    
+            with outcome.testPartExecutor(self):
+                self.setUp()
+            if outcome.success:
+                outcome.expecting_failure = expecting_failure
+                with outcome.testPartExecutor(self, isTest=True):
+&gt;                   testMethod()
+E                   TypeError: test_login_pwd_error() missing 2 required positional arguments: &apos;user_data&apos; and &apos;init_app&apos;
+
+C:\Program Files\Python37\lib\unittest\case.py:615: TypeError</failure></testcase></testsuite></testsuites>
